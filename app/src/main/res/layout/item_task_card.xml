@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="horizontal"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/taskCard"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+
+        android:layout_marginTop="20dp"
+
+        android:background="@color/taskCard"
+
+        app:cardCornerRadius="25dp"
+        app:strokeColor="@color/app_accent"
+        app:strokeWidth="4dp"
+
+        app:cardBackgroundColor="@color/taskCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="16dp"
+
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:paddingEnd="10dp"
+
+
+                android:orientation="vertical"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/awardCard"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/taskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="5dp"
+
+                    style="@style/textStyleBlack"
+
+                    android:textSize="@dimen/bigText"
+                    android:text="@string/welcome_title" />
+
+                <TextView
+                    android:id="@+id/taskTextDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    style="@style/textStyleBlack"
+                    android:textSize="@dimen/smallText"
+                    android:text="@string/welcome_description" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/progress_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/taskProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+
+                        android:progress="50"
+                        android:progressDrawable="@drawable/bg_progress"
+                        />
+
+                    <TextView
+                        android:id="@+id/progressText"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/taskProgress"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        style="@style/textStyleWhiteOutline"
+                        android:textSize="@dimen/smallText"
+                        android:text="1/2"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/awardCard"
+
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/bg_award_card"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:id="@+id/awardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="5dp"
+
+                    android:gravity="center"
+
+                    style="@style/textStyleWhiteOutline"
+                    android:textSize="@dimen/text"
+                    android:text="@string/text_award" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="2dp"
+
+                    app:srcCompat="@drawable/ic_coin" />
+
+                <TextView
+                    android:id="@+id/awardTextAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:gravity="center"
+
+                    style="@style/textStyleWhiteOutline"
+                    android:textSize="@dimen/text"
+                    android:fontFamily="@font/woodstick"
+                    android:text="9999" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

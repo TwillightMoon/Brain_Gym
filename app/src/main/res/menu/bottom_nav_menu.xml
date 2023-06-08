@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_tasks"
+        android:icon="@drawable/ic_clipboard"
+        android:title="@string/text_title_tasks" />
+
+    <item
+        android:id="@+id/navigation_games"
+        android:icon="@drawable/ic_gamepad"
+        android:title="@string/text_title_games" />
+
+    <item
+        android:id="@+id/navigation_collections"
+        android:icon="@drawable/ic_collections"
+        android:title="@string/text_title_collections"
+        />
+</menu>

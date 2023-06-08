@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="app_accent">#2155CD</color>
+    <color name="dark_blue">#076B92</color>
+    <color name="dark_blue2">#0AA1DD</color>
+    <color name="dark_blue3">#1A43A3</color>
+    <color name="light_blue">#30A2FF</color>
+    <color name="sky_blue">#79DAE8</color>
+    <color name="sky_blue2">#54C9F7</color>
+    <color name="cold_blue">#E8F9FD</color>
+
+    <color name="taskCard">#FFF5B8</color>
+
+
+    <color name="transparent">#00000000</color>
+
 </resources>

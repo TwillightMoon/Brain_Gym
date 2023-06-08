@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_key">welcome</string>
+    <string name="welcome_title">Добро пожаловать!</string>
+    <string name="welcome_description">Заглянуть в раздел с коллекциями</string>
+
+    <string name="first_time_key">first_time</string>
+    <string name="first_time_title">В первый раз?</string>
+    <string name="first_time_description">Сыграть свою первую игру</string>
+
+    <string name="victory_key">victory</string>
+    <string name="victory_title">Ура! Победа!</string>
+    <string name="victory_description">Выиграть свою первую игру</string>
+    
+    <string name="good_job_key">goodjob</string>
+    <string name="good_job_title">Отличная работа!</string>
+    <string name="good_job_description">Сыграть %d игр</string>
+</resources>

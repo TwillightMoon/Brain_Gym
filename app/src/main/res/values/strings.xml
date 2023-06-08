@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">Brain Gym</string>
+    <string name="text_app_name">Brain Gym</string>
+
+    <string name="text_title_games">Игры</string>
+    <string name="text_title_collections">Коллекции</string>
+    <string name="text_title_tasks">Задачи</string>
+
+    <string name="text_music_toggle">Музыка</string>
+    <string name="text_sound_toggle">Звук</string>
+    <string name="text_vibration_toggle">Вибрация</string>
+
+    <string name="text_volume_seek">Общий уровень громкости</string>
+    <string name="text_target_ad">Таргетовая реклама</string>
+    <string name="text_app_theme">Тема приложения</string>
+    <string name="text_rate_us">Оценить</string>
+    <string name="text_support_us">Поддержать</string>
+    <string name="text_FAQ">F.A.Q</string>
+    <string name="text_authors">Авторы</string>
+    
+    <string name="text_category_memory">Развитие памяти</string>
+    <string name="text_category_arithmetic">Быстрый счет</string>
+    <string name="text_category_attentiveness">Развитие внимательности</string>
+
+    <string name="text_game_memory">Memory</string>
+    <string name="text_game_sequence">Порядок</string>
+    
+    <string name="text_game_quick_account">Быстрый счет</string>
+    <string name="text_game_ticket">Счастливый билет</string>
+
+    <string name="text_game_Colors">Цвета</string>
+
+    <string name="text_award">Награда</string>
+
 </resources>

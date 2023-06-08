@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/navigation_games">
+
+    <!-- Cписок игр -->
+    <fragment
+        android:id="@+id/navigation_games"
+        android:name="com.example.braingym.UI.Fragments.Games.Games"
+        android:label="games"
+        tools:layout="@layout/fragment_games"
+
+        app:popUpTo="@+id/navigation_games"
+        app:popUpToInclusive="true"
+        >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Игры" />
+    </fragment>
+
+    <!-- Cписок задач -->
+    <fragment
+        android:id="@+id/navigation_tasks"
+        android:name="com.example.braingym.UI.Fragments.Tasks.Tasks"
+        android:label="tasks"
+        tools:layout="@layout/fragment_tasks"
+
+        app:popUpTo="@+id/navigation_tasks"
+        app:popUpToInclusive="true"
+        >
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Задачи" />
+    </fragment>
+
+    <!-- Cписок тем -->
+    <fragment
+        android:id="@+id/navigation_collections"
+        android:name="com.example.braingym.UI.Fragments.Collections.Collections"
+        android:label="collections"
+        tools:layout="@layout/fragment_collections"
+
+        app:popUpTo="@+id/navigation_collections"
+        app:popUpToInclusive="true"
+        >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Коллекция" />
+    </fragment>
+
+    <!-- Настройки -->
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.braingym.UI.Fragments.Settings.Settings"
+        android:label="settings"
+        tools:layout="@layout/fragment_settings">
+
+        <argument
+            android:name="title"
+            app:argType="string"
+
+            android:defaultValue="Настройки"
+            />
+        <argument
+            android:name="setting"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_arithmeticGames"
+        android:name="com.example.braingym.UI.Fragments.ArithmeticGames.ArithmeticGames"
+        android:label="fragment_arithmetic_games"
+        tools:layout="@layout/fragment_arithmetic_games" >
+        <argument
+            android:name="title"
+            android:defaultValue="Арифметика" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_attentivenessGames"
+        android:name="com.example.braingym.UI.Fragments.AttentivenessGames.AttentivenessGames"
+        android:label="fragment_attentiveness_games"
+        tools:layout="@layout/fragment_attentiveness_games" >
+        <argument android:name="title"
+            app:argType="string"
+            android:defaultValue="Восприятие" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_memoryGames"
+        android:name="com.example.braingym.UI.Fragments.MemoryGames.MemoryGames"
+        android:label="fragment_memory_games"
+        tools:layout="@layout/fragment_memory_games" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Память" />
+    </fragment>
+
+
+</navigation>

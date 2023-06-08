@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="H1">32sp</dimen>
+    <dimen name="H2">24sp</dimen>
+    <dimen name="H3">18sp</dimen>
+
+    <dimen name="VERY_big_text">49sp</dimen>
+    <dimen name="bigText">16sp</dimen>
+    <dimen name="text">14sp</dimen>
+    <dimen name="smallText">12sp</dimen>
+
+</resources>
