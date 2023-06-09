@@ -1,29 +1,37 @@
 package com.example.braingym.Data;
 
-public class Card {
-    private int id;
-    private int imageResId;
-    private boolean isVisible;
+import com.example.braingym.R;
 
-    public Card(int id, int imageResId) {
+public class Card {
+
+    private final int id;
+    private final int imageID;
+    private boolean matched;
+
+    public Card(int id, int imageID) {
         this.id = id;
-        this.imageResId = imageResId;
-        this.isVisible = false;
+        this.matched = false;
+        this.imageID = imageID;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getImageResId() {
-        return imageResId;
+    public boolean isMatched() {
+        return matched;
     }
 
-    public boolean isVisible() {
-        return isVisible;
+    public void setMatched(boolean matched) {
+        this.matched = matched;
     }
 
-    public void setVisible(boolean visible) {
-        isVisible = visible;
+    public int getFrontImageResId() {
+        return imageID;
+    }
+
+    public int getBackImageResId() {
+        return R.drawable.bg_cardback;
     }
 }
+

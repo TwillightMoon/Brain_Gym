@@ -1,4 +1,4 @@
-package com.example.braingym.UI.Fragments.Adapters;
+package com.example.braingym.UI.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,19 +9,43 @@ import android.widget.ImageView;
 
 import com.example.braingym.Data.Card;
 import com.example.braingym.R;
-import com.example.braingym.UI.Activities.MemoryGameActivity.MemoryGameActivityViewModel;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class MatchGameAdapter extends BaseAdapter {
+public class MatchCardAdapter extends BaseAdapter {
+
     private Context context;
     private List<Card> cards;
-    private OnItemClickListener itemClickListener;
+    private boolean[] cardVisibility;
 
-    public MatchGameAdapter(Context context, List<Card> cards, OnItemClickListener itemClickListener) {
+    public MatchCardAdapter(Context context) {
         this.context = context;
+        this.cards = new ArrayList<>();
+        this.cardVisibility = new boolean[0];
+    }
+
+    public void setCards(List<Card> cards) {
         this.cards = cards;
-        this.itemClickListener = itemClickListener;
+        this.cardVisibility = new boolean[cards.size()];
+        notifyDataSetChanged();
+    }
+
+    public void setCardVisible(int position, boolean isVisible) {
+        cardVisibility[position] = isVisible;
+    }
+    public void setCardVisible(Card card, boolean isVisible) {
+        int index = cards.indexOf(card);
+        cardVisibility[index] = isVisible;
+    }
+
+    public boolean isCardVisible(int position) {
+        return cardVisibility[position];
+    }
+
+    public void setCardsVisible(boolean isVisible) {
+        Arrays.fill(cardVisibility, isVisible);
     }
 
     @Override
@@ -49,19 +73,16 @@ public class MatchGameAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.imageView = convertView.findViewById(R.id.image_view_card);
             convertView.setTag(viewHolder);
-
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
         Card card = cards.get(position);
-        if (card.isVisible()) {
-            viewHolder.imageView.setImageResource(card.getImageResId());
+        if (cardVisibility[position]) {
+            viewHolder.imageView.setImageResource(card.getFrontImageResId());
         } else {
-            viewHolder.imageView.setImageResource(R.drawable.bg_cardback);
+            viewHolder.imageView.setImageResource(card.getBackImageResId());
         }
-
-        convertView.setOnClickListener(v -> itemClickListener.onItemClick(position));
 
         return convertView;
     }
@@ -69,10 +90,4 @@ public class MatchGameAdapter extends BaseAdapter {
     private static class ViewHolder {
         ImageView imageView;
     }
-
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
 }
-
-

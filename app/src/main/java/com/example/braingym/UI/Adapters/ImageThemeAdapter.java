@@ -1,4 +1,4 @@
-package com.example.braingym.UI.Fragments.Adapters;
+package com.example.braingym.UI.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;

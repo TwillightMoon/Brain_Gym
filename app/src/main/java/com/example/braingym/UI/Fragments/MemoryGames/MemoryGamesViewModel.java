@@ -8,9 +8,9 @@ import com.example.braingym.Data.Games.GameCardInfo;
 import com.example.braingym.Domain.App;
 import com.example.braingym.R;
 import com.example.braingym.UI.Activities.MainActivity.MainActivity;
-import com.example.braingym.UI.Activities.MemoryGameActivity.MemoryGameActivity;
-import com.example.braingym.UI.Fragments.Adapters.GameCategoryAdapter;
-import com.example.braingym.UI.Fragments.Adapters.onCardActionListener;
+import com.example.braingym.UI.Activities.MemoryGameActivity.MatchGameActivity;
+import com.example.braingym.UI.Adapters.GameCategoryAdapter;
+import com.example.braingym.UI.Adapters.onCardActionListener;
 
 public class MemoryGamesViewModel extends ViewModel {
     private MainActivity _parent;
@@ -30,7 +30,7 @@ public class MemoryGamesViewModel extends ViewModel {
                 Context context = _parent.getApplicationContext();
 
                 if(context.getString(R.string.text_game_memory).endsWith(cardName)){
-                    _parent.ActivityNavigate(MemoryGameActivity.class);
+                    _parent.ActivityNavigate(MatchGameActivity.class);
                 }
                 else
                     _parent.Navigate(gameCategory.destinationID);

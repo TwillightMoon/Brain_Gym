@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.braingym.Domain.App;
 import com.example.braingym.R;
 import com.example.braingym.UI.Activities.MainActivity.MainActivity;
-import com.example.braingym.UI.Fragments.Adapters.ImageThemeAdapter;
+import com.example.braingym.UI.Adapters.ImageThemeAdapter;
 
 public class CollectionsViewModel extends ViewModel {
 

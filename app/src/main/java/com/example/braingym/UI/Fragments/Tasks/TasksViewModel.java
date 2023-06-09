@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.braingym.Domain.App;
 import com.example.braingym.R;
 import com.example.braingym.UI.Activities.MainActivity.MainActivity;
-import com.example.braingym.UI.Fragments.Adapters.TaskCardAdapter;
+import com.example.braingym.UI.Adapters.TaskCardAdapter;
 
 public class TasksViewModel extends ViewModel {
 

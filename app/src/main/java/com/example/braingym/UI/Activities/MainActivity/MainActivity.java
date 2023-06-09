@@ -19,7 +19,6 @@ import android.widget.Toast;
 
 import com.example.braingym.Domain.Factories.VMFactories.MainActivityViewModelFactory;
 import com.example.braingym.R;
-import com.example.braingym.UI.Activities.MemoryGameActivity.MemoryGameActivity;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
