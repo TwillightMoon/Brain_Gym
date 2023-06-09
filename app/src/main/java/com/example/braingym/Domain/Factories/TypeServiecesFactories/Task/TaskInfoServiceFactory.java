@@ -40,7 +40,7 @@ public class TaskInfoServiceFactory implements CardServiceFactory {
         ));
         taskInfoTypeService.addCard(new TaskInfo(
                 _context.getString(R.string.good_job_title),
-                _context.getString(R.string.good_job_description),
+                String.format(_context.getString(R.string.good_job_description), 5),
                 R.drawable.ic_coin,
                 200,
                 5

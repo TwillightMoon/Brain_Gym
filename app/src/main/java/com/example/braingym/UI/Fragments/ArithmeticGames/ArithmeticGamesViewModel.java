@@ -15,7 +15,7 @@ public class ArithmeticGamesViewModel extends ViewModel {
 
     public ArithmeticGamesViewModel(MainActivity _parent){
         this._gameCategoryAdapter = new GameCategoryAdapter(
-                App.getArithmeticGameCard().getCardInfo(),
+                App.getArithmeticGameCard().getCardsInfo(),
                 R.layout.item_game_card);
 
         this._parent = _parent;

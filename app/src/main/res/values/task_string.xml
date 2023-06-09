@@ -15,4 +15,5 @@
     <string name="good_job_key">goodjob</string>
     <string name="good_job_title">Отличная работа!</string>
     <string name="good_job_description">Сыграть %d игр</string>
+    
 </resources>

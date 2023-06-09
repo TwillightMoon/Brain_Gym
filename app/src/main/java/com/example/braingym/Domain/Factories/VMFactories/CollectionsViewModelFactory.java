@@ -2,16 +2,17 @@ package com.example.braingym.Domain.Factories.VMFactories;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider.Factory;
 
 import com.example.braingym.UI.Activities.MainActivity.MainActivity;
-import com.example.braingym.UI.Fragments.Tasks.TasksViewModel;
+import com.example.braingym.UI.Fragments.Collections.CollectionsViewModel;
 
-public class TaskViewModelFactory implements Factory {
+import androidx.lifecycle.ViewModelProvider.Factory;
+
+public class CollectionsViewModelFactory implements Factory {
 
     private MainActivity mainActivity;
 
-    public TaskViewModelFactory(MainActivity parent){
+    public CollectionsViewModelFactory(MainActivity parent){
         mainActivity = parent;
     }
 
@@ -19,8 +20,8 @@ public class TaskViewModelFactory implements Factory {
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         // Создайте и верните экземпляр вашей модели представления
-        if (modelClass.isAssignableFrom(TasksViewModel.class)) {
-            return (T) new TasksViewModel(mainActivity);
+        if (modelClass.isAssignableFrom(CollectionsViewModel.class)) {
+            return (T) new CollectionsViewModel(mainActivity);
         }
         throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
     }

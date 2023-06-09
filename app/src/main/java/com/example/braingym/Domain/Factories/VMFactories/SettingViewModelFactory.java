@@ -1,26 +1,26 @@
 package com.example.braingym.Domain.Factories.VMFactories;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider.Factory;
 
-import com.example.braingym.UI.Activities.MainActivity.MainActivity;
-import com.example.braingym.UI.Fragments.Tasks.TasksViewModel;
+import com.example.braingym.UI.Fragments.Settings.SettingsViewModel;
 
-public class TaskViewModelFactory implements Factory {
+public class SettingViewModelFactory implements Factory {
+    private Context context;
 
-    private MainActivity mainActivity;
-
-    public TaskViewModelFactory(MainActivity parent){
-        mainActivity = parent;
+    public SettingViewModelFactory(Context context){
+        this.context = context;
     }
 
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         // Создайте и верните экземпляр вашей модели представления
-        if (modelClass.isAssignableFrom(TasksViewModel.class)) {
-            return (T) new TasksViewModel(mainActivity);
+        if (modelClass.isAssignableFrom(SettingsViewModel.class)) {
+            return (T) new SettingsViewModel(context);
         }
         throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
     }

@@ -9,7 +9,7 @@ public class TypeService<Type> {
         _typeInfo = new ArrayList<Type>();
     }
 
-    public ArrayList<Type> getCardInfo(){
+    public ArrayList<Type> getCardsInfo(){
         return _typeInfo;
     }
     public int getCount(){

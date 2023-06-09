@@ -16,19 +16,26 @@
     <string name="text_support_us">Поддержать</string>
     <string name="text_FAQ">F.A.Q</string>
     <string name="text_authors">Авторы</string>
-    
+
     <string name="text_category_memory">Развитие памяти</string>
     <string name="text_category_arithmetic">Быстрый счет</string>
     <string name="text_category_attentiveness">Развитие внимательности</string>
 
     <string name="text_game_memory">Memory</string>
     <string name="text_game_sequence">Порядок</string>
-    
+
     <string name="text_game_quick_account">Быстрый счет</string>
     <string name="text_game_ticket">Счастливый билет</string>
 
     <string name="text_game_Colors">Цвета</string>
 
     <string name="text_award">Награда</string>
+
+    <string name="SETTING_PREF_NAME">settings</string>
+    
+    
+    <string name="text_game_header_time">Время</string>
+    <string name="text_game_header_time_left">Осталось</string>
+    <string name="text_game_header_score">Счет</string>
 
 </resources>

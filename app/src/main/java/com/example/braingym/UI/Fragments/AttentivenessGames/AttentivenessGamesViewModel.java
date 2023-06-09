@@ -15,7 +15,7 @@ public class AttentivenessGamesViewModel extends ViewModel {
 
     public AttentivenessGamesViewModel(MainActivity _parent){
         this._gameCategoryAdapter = new GameCategoryAdapter(
-                App.getAttentivenessGameCards().getCardInfo(),
+                App.getAttentivenessGameCards().getCardsInfo(),
                 R.layout.item_game_card);
 
         this._parent = _parent;

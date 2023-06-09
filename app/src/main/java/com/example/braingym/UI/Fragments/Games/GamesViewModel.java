@@ -16,7 +16,7 @@ public class GamesViewModel extends ViewModel {
 
     public GamesViewModel(MainActivity _parent){
         this._gameCategoryAdapter = new GameCategoryAdapter(
-                App.getGameCategories().getCardInfo(),
+                App.getGameCategories().getCardsInfo(),
                 R.layout.item_game_category);
 
         this._parent = _parent;

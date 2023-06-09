@@ -4,11 +4,13 @@ import android.app.Application;
 import android.content.Context;
 
 import com.example.braingym.Data.Games.GameCardInfo;
+import com.example.braingym.Data.ImageTheme.ImageThemeInfo;
 import com.example.braingym.Data.Tasks.TaskInfo;
 import com.example.braingym.Data.TypeService;
 import com.example.braingym.Domain.Factories.TypeServiecesFactories.ArithmeticGames.ArithmeticGameCardsFactory;
 import com.example.braingym.Domain.Factories.TypeServiecesFactories.AttentivenessGames.AttentivenessGameCardsFactory;
 import com.example.braingym.Domain.Factories.TypeServiecesFactories.GameCategories.GameCategoriesFactory;
+import com.example.braingym.Domain.Factories.TypeServiecesFactories.ImageThemes.ImageThemesServiceFactory;
 import com.example.braingym.Domain.Factories.TypeServiecesFactories.MemoryGames.MemoryGameCardsFactory;
 import com.example.braingym.Domain.Factories.TypeServiecesFactories.Task.TaskInfoServiceFactory;
 
@@ -20,6 +22,7 @@ public class App extends Application {
     private static TypeService<GameCardInfo> _arithmeticGameCard;
 
     private static TypeService<TaskInfo> _tasks;
+    private static TypeService<ImageThemeInfo> _imageThemes;
     private static Context _appContext;
 
     public static TypeService<GameCardInfo> getGameCategories(){
@@ -54,6 +57,13 @@ public class App extends Application {
             _tasks = new TaskInfoServiceFactory(_appContext).create();
 
         return _tasks;
+    }
+
+    public static TypeService<ImageThemeInfo> getImageThemes() {
+        if(_imageThemes == null)
+            _imageThemes = new ImageThemesServiceFactory(_appContext).create();
+
+        return _imageThemes;
     }
 
     @Override
